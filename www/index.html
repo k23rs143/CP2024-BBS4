@@ -23,6 +23,15 @@ let currentEditId = null;
 // ログイン中のユーザ
 let currentUser = null;
 
+// 色の順番を定義
+const colors = ['red', 'blue', 'green', 'white'];
+let colorIndex = 0;
+
+// ボタンのクリックイベントを設定
+$(document).ready(function() {
+    $('#changeColorButton').on('click', changeBackgroundColor);
+});
+
 // メッセージ表示処理
 function showMessage(message, type = 'success') {
     const messageArea = $('#messageArea');
