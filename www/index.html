@@ -27,11 +27,6 @@ let currentUser = null;
 const colors = ['red', 'blue', 'green', 'white'];
 let colorIndex = 0;
 
-// ボタンのクリックイベントを設定
-$(document).ready(function() {
-    $('#changeColorButton').on('click', changeBackgroundColor);
-});
-
 // メッセージ表示処理
 function showMessage(message, type = 'success') {
     const messageArea = $('#messageArea');
