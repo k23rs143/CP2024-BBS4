@@ -27,6 +27,12 @@ let currentUser = null;
 const colors = ['red', 'blue', 'green', 'white'];
 let colorIndex = 0;
 
+// 背景色を変更する関数
+function changeBackgroundColor() {
+    document.body.style.backgroundColor = colors[colorIndex];
+    colorIndex = (colorIndex + 1) % colors.length; 
+}
+
 // メッセージ表示処理
 function showMessage(message, type = 'success') {
     const messageArea = $('#messageArea');
